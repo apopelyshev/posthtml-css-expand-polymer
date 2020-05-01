@@ -6,18 +6,18 @@ module.exports = function(options) {
   const root = options.root || './';
   const encoding = options.encoding || 'utf-8';
   return function posthtmlInclude(tree) {
+    let content;
     tree.match({ tag: 'link', attrs: { expand: 'true', rel: 'stylesheet' } }, function(node) {
       const href = node.attrs.href;
-      let content;
       if (href) {
         const src = path.resolve(root, href);
-        content = parser(fs.readFileSync(src, encoding));
+        content = `<style is="custom-style">${parser(fs.readFileSync(src, encoding))}</style>`;
       }
       return {
         tag: 'custom-style',
-        content: `<style is="custom-style">${content}</style>`
+        content: content,
+        id: 'inlined'
       };
     });
-    return tree;
   };
 };
