@@ -13,11 +13,12 @@ module.exports = function(options) {
         const src = path.resolve(root, href);
         content = `<style is="custom-style">${parser(fs.readFileSync(src, encoding))}</style>`;
       }
-      return {
+      Object.assign(node, {
         tag: 'custom-style',
-        content: content,
-        id: 'inlined'
-      };
+        attrs: {id: 'inlined'},
+        content: content
+      });
+      return node;
     });
     return tree;
   };

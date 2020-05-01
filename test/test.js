@@ -18,7 +18,7 @@ describe('expand', () => {
   it('expand style', (done) => {
     test(
       '<link expand="true" rel="stylesheet" href="./test/css/test.css">',
-      '<custom-style><style is="custom-style">.test{display:block;}</style></custom-style>',
+      '<custom-style id="inlined"><style is="custom-style">.test{display:block;}</style></custom-style>',
       {},
       done
     );
