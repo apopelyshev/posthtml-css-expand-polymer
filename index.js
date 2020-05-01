@@ -14,8 +14,8 @@ module.exports = function(options) {
         content = parser(fs.readFileSync(src, encoding));
       }
       return {
-        tag: 'style',
-        content: content
+        tag: 'custom-style',
+        content: `<style is="custom-style">${content}</style>`
       };
     });
     return tree;

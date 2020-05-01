@@ -1,12 +1,12 @@
 {
-  "name": "posthtml-style-expansion",
-  "version": "0.2.0",
-  "description": "PostHTML plugin expansion link rel=\"stylesheet\"",
+  "name": "posthtml-css-expand-polymer",
+  "version": "0.2.1",
+  "description": "PostHTML plugin for exanding <link> CSS imports in a format appropriate for PolymerElements",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "merotan <renyamizuno+js@gmail.com>",
+  "author": "Artem Popelyshev <apopelyshev@gmail.com> (http://apopelyshev.github.io)",
   "license": "MIT",
   "dependencies": {
     "posthtml-parser": "^0.4.2"
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/renyamizuno/posthtml-style-expantion.git"
+    "url": "git+https://github.com/apopelyshev/posthtml-css-expand-polymer.git"
   },
   "keywords": [
     "posthtml",
@@ -26,7 +26,7 @@
     "css"
   ],
   "bugs": {
-    "url": "https://github.com/renyamizuno/posthtml-style-expantion/issues"
+    "url": "https://github.com/apopelyshev/posthtml-css-expand-polymer/issues"
   },
-  "homepage": "https://github.com/renyamizuno/posthtml-style-expantion#readme"
+  "homepage": "https://github.com/apopelyshev/posthtml-css-expand-polymer#readme"
 }
